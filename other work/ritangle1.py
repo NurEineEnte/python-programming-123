@@ -1,5 +1,6 @@
 sequences = []
-for x in range(1,49):
+for x in range(1,59):
+    #bound error was above, corrected by dom!
     for k in range(8,24):
         sequencetotest = [str(x), str(x+k), str(x+2*k), str(x+3*k), str(x+4*k)]
         for i in range(5):
