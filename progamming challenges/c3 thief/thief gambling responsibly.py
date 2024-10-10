@@ -12,19 +12,19 @@ digit1 = int(input("input digit1 "))
 digit2 = int(input("input digit2 "))
 digit3 = int(input("input digit3 "))
 digit4 = int(input("input digit4 "))
-count = 0
 numOfLists = 0
 combinations = []
 
 listofnumbers = [digit1, digit2, digit3, digit4]
 numberstouse = []
-samedigit = 1
+uniquedigits = 0
 for i in range(len(listofnumbers)):
-    if listofnumbers[i] in numberstouse:
-        samedigit = samedigit+1
+    if listofnumbers[i] not in numberstouse:
+        uniquedigits +=1
     numberstouse.append(listofnumbers[i])
-possibledigits = 4 - samedigit
-possiblecombinations = factorialfinder(len(numberstouse)) / factorialfinder(len(numberstouse)-possibledigits)
+uniquedigits -=1
+possiblecombinations = factorialfinder(len(numberstouse)) // factorialfinder(len(numberstouse)-uniquedigits)
+print(possiblecombinations)
 
 while numOfLists < possiblecombinations:
     newlist = ""
@@ -34,12 +34,9 @@ while numOfLists < possiblecombinations:
         indextoadd = random.randint(0,len(numberstouse)-1)
         newlist = newlist + str(numberstouse[indextoadd])
         del numberstouse[indextoadd]
-
+    
     if newlist not in combinations:
         combinations.append(newlist)
-        count = 0
         numOfLists = numOfLists + 1
-    else:
-        count = count + 1
 print(combinations)
 print(numOfLists, "combinations")
