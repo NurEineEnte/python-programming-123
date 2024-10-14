@@ -28,7 +28,7 @@ for i in range(len(listofnumbers)):
         uniquedigits +=1
     numberstouse.append(listofnumbers[i])
 uniquedigits -=1
-possiblecombinations = factorialfinder(len(numberstouse)) /a/ (factorialfinder(uniquedigits) * factorialfinder(len(numberstouse)-uniquedigits))
+possiblecombinations = factorialfinder(len(numberstouse)) / (factorialfinder(uniquedigits) * factorialfinder(len(numberstouse)-uniquedigits))
 print(uniquedigits)
 print(possiblecombinations)
 
