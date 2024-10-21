@@ -1,20 +1,20 @@
-
 happynumberssequences = []
 startingnumber = 1
-listofnumbers = []
 while len(happynumberssequences) < 8:
+    listofnumbers = []
+    currentnumber = str(startingnumber)
     while True:
-        startingnumber = str(startingnumber)
         total = 0
-        for i in range(len(startingnumber)):
-            total = total + int(startingnumber[i]) * int(startingnumber[i])
-        
-        if startingnumber in listofnumbers:
-            listofnumbers.append(startingnumber)
+        for i in range(len(currentnumber)):
+            total += int(currentnumber[i]) ** 2 
+        if total in listofnumbers:
+            listofnumbers.append(total)
             break
-        elif len(listofnumbers) > 1 and listofnumbers[len(listofnumbers)-1] == 1:
+        elif total == 1:
             happynumberssequences.append(startingnumber)
             break
-        startingnumber = total
-
-        startingnumber += 1
+        else:
+            listofnumbers.append(total)
+            currentnumber = str(total)
+    startingnumber += 1
+print(happynumberssequences)
