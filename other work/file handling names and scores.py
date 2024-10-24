@@ -14,7 +14,7 @@ def menu1():
             #this calls the functions to get the user details and write them to the file
             elif choice == "1":
                 getdetails()
-                writetofile(name,score)
+                writetofile()
             #this one checks if they entered 2, and also if the file exists so that an error doesn't appear
             elif choice == "2" and os.path.exists("scoredata.txt"):
                 viewfile()
