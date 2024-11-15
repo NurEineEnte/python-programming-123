@@ -18,6 +18,8 @@ def getimage():
     return image
 
 def encoder(image):
+    count = 1
     for i in range(len(image)):
+        
         
     
