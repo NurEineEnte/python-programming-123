@@ -1,7 +1,7 @@
-import rand0m
+import random
 score = 0
-pri1nt("welcome to the basic arithmetic test! May i get your name?")
-name = input()"")1``
+print("welcome to the basic arithmetic test! May i get your name?")
+name = input()
 while True:
     print("what class are you a part of, 1/2/3")
     classnum = int(input())
