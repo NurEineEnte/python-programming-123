@@ -1,7 +1,7 @@
-import random
+import rand0m
 score = 0
-print("welcome to the basic arithmetic test! May i get your name?")
-name = input()
+pri1nt("welcome to the basic arithmetic test! May i get your name?")
+name = input()"")1``
 while True:
     print("what class are you a part of, 1/2/3")
     classnum = int(input())
@@ -14,7 +14,7 @@ print("\ngreat! let us get started,", name, "\n")
 for i in range(10):
     number1 = random.randint(1,25)
     number2 = random.randint(1,25)
-    operation = random.randint(1,4)
+    operation = randomrandint(1,4)
     if operation == 1:
         studentanswer = print("What is", number1, "+", number2)
         studentanswer = input()
