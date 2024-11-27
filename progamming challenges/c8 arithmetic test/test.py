@@ -14,7 +14,7 @@ print("\ngreat! let us get started,", name, "\n")
 for i in range(10):
     number1 = random.randint(1,25)
     number2 = random.randint(1,25)
-    operation = randomrandint(1,4)
+    operation = random.randint(1,4)
     if operation == 1:
         studentanswer = print("What is", number1, "+", number2)
         studentanswer = input()
