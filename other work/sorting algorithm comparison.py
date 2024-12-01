@@ -18,22 +18,28 @@ def bubblesort(numarray):
     return numarray
 
 def insertionsort(numarray):
-    for i in range(1, len(numarray)-1):
-        numtoplace = numarray[i]
-        for j in range(i-1):
-            if numtoplace <= numarray[j]:
-                break
-            elif numtoplace > numarray[j] and j == i-1:
-                j = i+1
-        for x in range(j, len(numarray)-1):
-            numarray[x], numtoplace = numtoplace, numarray[x]
+    for j in range(1, len(numarray)):
+        nextNum = numarray[j]
+        i = j - 1
+        while i>=0 and numarray[i]>nextNum:
+            numarray[i + 1] = numarray[i]
+            i = i - 1       
+        numarray[i + 1] = nextNum
     return numarray
-print(insertionsort(getnumarray()))
-            
+num = getnumarray()
+print(num)
+
+time1 = time.time()
+print(insertionsort(num), "bubble")
+print(time.time()-time1)  
+
+time1 = time.time()
+print(insertionsort(num), "insertion")
+print(time.time()-time1)          
             
         
     
 
     
-
+ 
         

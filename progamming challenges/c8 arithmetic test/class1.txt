@@ -1,2 +1,6 @@
-Bob
-3
+bob
+0
+bob
+2
+bob
+2
