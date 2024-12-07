@@ -51,7 +51,7 @@ def quiz():
             print("correct answer!\n")
         else:
             print("sorry! the correct answer was", answer)
-    print("\nwell done you got", score, "\n")
+    print("\nwell done you got", score, "and your scores have been updated\n")
     return score
 
 def bubblesort(list, type):
@@ -93,6 +93,7 @@ def viewsortedfile():
             classdata = bubblesort(classdata, "name")
             for i in range(0, len(classdata), 2):
                 print(classdata[i], classdata[i+1])   
+            break
         else:
             print("input 1 2 or 3 ")
 
@@ -104,25 +105,28 @@ def handlequizdata():
         if details[1] == i:
             countofname += 1
     if countofname == 3:
-        for i in range(len(classdata)):
-            if details[1] == classdata[i]:
-                del classdata[i]
-                del classdata[i]
+        for g in range(len(classdata)):
+            if details[1] == classdata[g]:
+                del classdata[g]
+                del classdata[g]
                 break
     classdata.append(details[1])
     classdata.append(str(details[2]))
     updatethefile(details, classdata)
 
-handlequizdata()
 while True:
-    print("(for teachers), would you like to view the file sorted score descending - > alphabetical, y/n \n")
+    print("\nwelcome to the arithmetic test menu, what do you want to do")
+    print("1 - do the test (student)")
+    print("2 - view test scores(teacher)")
+    print("quit - stop")
     choice = input()
-    if choice == "y":
+    if choice == "1":
+        handlequizdata()
+    elif choice == "2":
         viewsortedfile()
-        break
-    elif choice == "n":
-        print("have a nice day!")
+    elif choice.lower() == "quit":
+        print("bye bye!!")
         break
     else:
-        print("input y/n")
+        print("input a valid choice")
 

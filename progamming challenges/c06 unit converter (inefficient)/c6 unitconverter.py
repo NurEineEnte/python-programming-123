@@ -62,7 +62,7 @@ def currency():
         print("4 - € to £")
         print("5 - £ to €")
         print("6 - $ to €")
-        choice = input()
+        choice = int(input())
         while True:
             try:
                 valuetoconvert = float(input("enter your value"))
@@ -71,25 +71,11 @@ def currency():
             else:
                 print("\n")
                 break
+        conversiontable = [[1.29, 1/1.29, 1.08, 0.84, 1/0.84, 1/1.08], ["$", "£", "$", "£", "€", "€"]]
         if choice == "":
             break
-        elif choice == "1":
-            print((valuetoconvert * 1.29), "$")
-            break
-        elif choice == "2":
-            print((valuetoconvert / 1.29), "£")
-            break
-        elif choice == "3":
-            print((valuetoconvert * 1.08), "$")
-            break
-        elif choice == "4":
-            print((valuetoconvert * 0.84), "£")
-        elif choice == "5":
-            print((valuetoconvert / 0.84), "€")
-            break
-        elif choice == "6":
-            print((valuetoconvert / 1.08), "€")
-            break
+        else:
+            print((valuetoconvert * conversiontable[0][choice-1]), conversiontable[1][choice-1])
 
 def volume():
     while True:
@@ -100,7 +86,7 @@ def volume():
         print("4 - m^3 to cm^3(ml)")
         print("5 - dm^3(L) to m^3")
         print("6 - m^3 to dm^3(L)")
-        choice = input()
+        choice = int(input())
         while True:
             try:
                 valuetoconvert = float(input("enter your value"))
@@ -109,24 +95,11 @@ def volume():
             else:
                 print("\n")
                 break
+        conversiontable = [[0.001, 1000, 0.000001, 1000000, 0.001, 1000], ["dm^3(L)", "cm^3(ml)", "m^3", "cm^3(ml)", "m^3", "dm^3(L)"]]
         if choice == "":
             break
-        elif choice == "1":
-            print((valuetoconvert / 1000), "dm^3(L)")
-            break
-        elif choice == "2":
-            print((valuetoconvert * 1000), "cm^3(ml)")
-            break
-        elif choice == "3":
-            print((valuetoconvert / 1000000), "m^3")
-            break
-        elif choice == "4":
-            print((valuetoconvert * 1000000), "cm^3(ml)")
-        elif choice == "5":
-            print((valuetoconvert / 1000), "m^3")
-            break
-        elif choice == "6":
-            print((valuetoconvert * 1000), "dm^3(L)")
+        else:
+            print((valuetoconvert * conversiontable[0][choice-1]), conversiontable[1][choice-1])
             break
 
 menu()

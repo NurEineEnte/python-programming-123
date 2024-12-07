@@ -2,8 +2,9 @@ import random
 import time
 credit = 100
 symbols = ["🍒", "🔔", "🍋", "🍊", "⭐", "💀"]
-print("👋 welcome to the fruit machine, let us start with a roll and you'll learn the rules pretty fast \n")
-time.sleep(2)
+print("👋 welcome to the fruit machine\nyou will start with £1.00 \n- 2 of the same symbol gets you 50p \n- 3 of the same symbol gets you £1\n- 🔔🔔🔔gets you a jackpot (£5)\n- 💀💀 loses you £1\n- 💀💀💀 bankrupts you  ")
+print("\n and we shall start with a roll in 5 seconds")
+time.sleep(5)
 while True:
     skulls = 0
     bells = 0
