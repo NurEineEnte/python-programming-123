@@ -20,5 +20,14 @@ print(firstline)
 print(secondline)
 
 if operation == "+":
-    for x in ["".join([operatifor i in range(0, number+1)]:
-          
+    for g in range(number+1):
+        print(g, "|"," ".join([str(number + i) for i in range(number+1)]))
+elif operation == "-":
+    for g in range(number+1):
+        print(g, "|"," ".join([str(number - i) for i in range(number+1)]))
+elif operation == "*":
+    for g in range(number+1):
+        print(g, "|"," ".join([str(number * i) for i in range(number+1)]))
+elif operation == "/":
+    for g in range(number+1):
+        print(g, "|"," ".join([str(number / i) for i in range(number+1)]))
