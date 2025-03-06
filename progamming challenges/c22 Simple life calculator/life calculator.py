@@ -30,11 +30,15 @@ def incometax():
                 taxes += addrate * 0.45
             taxes += higherrate * 0.4
         taxes += basicrate * 0.2
-    print("your total taxes add to", taxes")
+    print("your total taxes add to", taxes)
+    print("so your income you get is", income - taxes)
           
             
 
 def timestable():
     while True:
         try:
-            print("hello world")
+            num = int(input("input an integer to do its times tables"))
+            iterations = int(input("how many "))
+        except:
+            print("No")
