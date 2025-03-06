@@ -37,4 +37,4 @@ def incometax():
 def timestable():
     while True:
         try:
-            print()
+            print("hello world")
