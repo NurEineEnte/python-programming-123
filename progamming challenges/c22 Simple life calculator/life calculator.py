@@ -18,8 +18,21 @@ def incometax():
             print("input your annual income (float/decimal value)")
         else:
             break
-    if income > 12570
-    personal_allowance = income - 
+    taxes = 0
+    if income > 12570:
+        basicrate = income - 12570
+        if basicrate > 37699:
+            basicrate = 37699
+            higherrate = basicrate - basicrate
+            if higherrate > 74869:
+                higherrate = 74869
+                addrate = 125140 - higherrate
+                taxes += addrate * 0.45
+            taxes += higherrate * 0.4
+        taxes += basicrate * 0.2
+    print("your total taxes add to", taxes")
+          
+            
 
 def timestable():
     while True:
